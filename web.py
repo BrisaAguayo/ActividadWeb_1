@@ -1,7 +1,7 @@
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from urllib.parse import parse_qsl, urlparse
 
-
+#Esta clase se modifica
 class WebRequestHandler(BaseHTTPRequestHandler):
     def url(self):
         return urlparse(self.path)
@@ -27,5 +27,5 @@ class WebRequestHandler(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     print("Starting server")
-    server = HTTPServer(("localhost", 8080), WebRequestHandler)
+    server = HTTPServer(("localhost", 8000), WebRequestHandler)
     server.serve_forever()
